@@ -3,12 +3,12 @@ import sqlite3
 import tkinter.messagebox as mb
 
 # Connecting to the Database
-connector = sqlite3.connect('SchoolManagement.db')
+connector = sqlite3.connect('Attendance.db')
 cursor = connector.cursor()
 
 # Creating the table if not exists
 cursor.execute(
-    "CREATE TABLE IF NOT EXISTS ATTENDANCE (ROLL_NO TEXT, STREAM TEXT, ATTENDANCEPERC TEXT)"
+    "CREATE TABLE IF NOT EXISTS ATTENDANCE (ATT_ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,ROLL_NO TEXT, STREAM TEXT, ATTENDANCEPERC TEXT)"
 )
 
 # Function to add attendance based on roll number
@@ -23,7 +23,7 @@ def add_attendance():
         try:
 
                 # Update attendance if roll number exists
-                cursor.execute("INSERT INTO ATTENDANCE VALUES (?,?,?)", (roll_no, stream, attendance))
+                cursor.execute("INSERT INTO ATTENDANCE (ROLL_NO, STREAM, ATTENDANCEPERC) VALUES (?,?,?)", (roll_no, stream, attendance))
                 connector.commit()
                 mb.showinfo('Success', f"Attendace {attendance} added for Roll No: {roll_no}")
         except Exception as e:
