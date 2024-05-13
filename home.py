@@ -67,7 +67,7 @@ def remove_record():
         values = tree.item(current_item)
         selection = values["values"]
         tree.delete(current_item)
-        connector.execute('DELETE FROM SCHOOL_MANAGEMENT WHERE STUDENT_ID=%d' % selection[0])
+        connector.execute('DELETE FROM SCHOOL_MANAGEMENT WHERE STUDENT_ID=%d' % selection[0]) 
         connector.commit()
         mb.showinfo('Done', 'The record you wanted deleted was successfully deleted.')
         display_records()
