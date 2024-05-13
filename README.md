@@ -1,5 +1,4 @@
 # STUDENTS MARK MANAGEMENT SYSTEM
-Prepared By: HARSHA VARDHAN R 	  KISHORE A.R.		  PRANAVADHAR A.	S R PRANAV SURIYA
 
 ## Problem Statement:
 Design and develop a comprehensive Student Mark Management System that facilitates efficient management of student academic records, assessments, attendance, and related information for educational institutions. The system is capable of providing separate interfaces for students, faculty, and administrators, ensuring secure access to relevant features and data
